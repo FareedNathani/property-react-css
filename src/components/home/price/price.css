@@ -1,0 +1,163 @@
+.price {
+    text-align: center;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.price:hover {
+    background: linear-gradient(145deg, #e0f7fa, #ffffff); /* Lighter gradient on hover */
+}
+
+.price .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.price .content .box {
+    width: 31%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.price .content .box:hover {
+    transform: translateY(-15px) scale(1.05) rotate(1deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background-color: #35d887; /* Soft orange color on hover */
+}
+
+.price .content .box:hover h3 {
+    color: #d32f2f; /* Dark red color for heading on hover */
+}
+
+.price .content .box:hover p {
+    color: #616161; /* Grey color for paragraphs on hover */
+}
+
+.price button {
+    margin-bottom: 20px;
+    background-color: #47db4c; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.price button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.price h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.price h3:hover {
+    color: #d32f2f; /* Change to dark red on hover */
+    transform: scale(1.05);
+}
+
+.price h1 {
+    font-size: 64px;
+    color: #444;
+    animation: fadeIn 1s ease;
+}
+
+.price h1 span {
+    font-size: 32px;
+    font-weight: 500;
+    color: #666;
+}
+
+.price ul {
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.price ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.price ul li:nth-child(1) { animation-delay: 0.1s; }
+.price ul li:nth-child(2) { animation-delay: 0.2s; }
+.price ul li:nth-child(3) { animation-delay: 0.3s; }
+
+.price label {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-color: #4edd53; /* Green for labels */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.price label:hover {
+    transform: scale(1.2);
+    background-color: #4ad851; /* Darker green on hover */
+}
+
+.price .btn5 {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .price .content {
+        flex-direction: column;
+    }
+
+    .price .content .box {
+        width: 100%;
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,47 @@
+:root {
+    --primary-bg-color: transparent; /* Changed from black to transparent */
+    --primary-text-color: white;
+    --box-shadow-color: rgba(112, 121, 138, 0.18);
+    --hover-bg-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+}
+
+.featured .box {
+    background-color: var(--primary-bg-color); /* Will now be transparent */
+    color: var(--primary-text-color);
+    box-shadow: 0 4px 20px 0 var(--box-shadow-color);
+    border-radius: 6px;
+    text-align: center;
+    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.featured .box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 30px 0 var(--box-shadow-color); /* Darker shadow on hover */
+    background-color: var(--hover-bg-color); /* Slightly lighten background on hover */
+}
+
+.featured img {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+}
+
+.call-sign {
+    margin-top: 15px; /* Add some space above the call sign */
+    font-size: 1.2em; /* Adjust font size as needed */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Uppercase for a stronger impact */
+    letter-spacing: 1px; /* Add letter spacing for better readability */
+    color: var(--primary-text-color); /* Ensure text color matches */
+    display: flex; /* Flexbox for better alignment */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.call-icon {
+    width: 20px; /* Set width for the icon */
+    height: 20px; /* Set height for the icon */
+    margin-right: 10px; /* Space between icon and text */
+}
